@@ -44,12 +44,20 @@ seqs_all <- c(fasta1, fasta2, fasta3)
 # seqs_all$`NC_043582.1 |Bos taurus|Netherlands|2011` == seqs_all$`KC355459.1 |Bos taurus|Netherlands|2011` 
 
 # ------------------------------------------------------------------------------
-# 
+# Subset to sequences where S, M and L are present for each isolate 
 # ------------------------------------------------------------------------------
 
 SML <- read_csv("complete_isolates_SML.csv")
 
-SML$Organism_Name %>% table()
+SML_2 <- SML %>% mutate(
+  Collection_Year = Collection_Date %>% str_split_i("-", 1)
+)
+
+write_csv(SML_2, "complete_isolates_SML2.csv")
+
+table(SML_2$Collection_Year, useNA = "always")
+SML_2$Organism_Name %>% table()
+SML_2$Country %>% table()
 
 seqs_all
 names(seqs_all) <- str_extract(names(seqs_all), "^[^.\\s]+")
@@ -84,7 +92,7 @@ fasta_out_group <- list(
   L = out_seqs["NC_055119.1 |California encephalitis virus|USA: California|Ochlerotatus dorsalis"]
 )
 
-# Export 
+# Export with outgroup 
 lapply(names(seqs_by_seg), function(seg){
   
   # seg <- "L"
@@ -93,6 +101,14 @@ lapply(names(seqs_by_seg), function(seg){
   comb <- c(seqs_by_seg[[seg]], out_group)
   
   writeXStringSet(comb, glue("helene/out/SML_{seg}.fasta"))
+  # writeXStringSet(seqs_by_seg[[seg]], glue("helene/out/{seg}.fasta"))
+  
+})
+
+# Export 
+lapply(names(seqs_by_seg), function(seg){
+
+  writeXStringSet(seqs_by_seg[[seg]], glue("helene/out/SML_{seg}_noout.fasta"))
   # writeXStringSet(seqs_by_seg[[seg]], glue("helene/out/{seg}.fasta"))
   
 })

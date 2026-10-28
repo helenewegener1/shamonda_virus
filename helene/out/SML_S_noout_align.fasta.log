@@ -1,0 +1,203 @@
+IQ-TREE single-core version 3.1.4 for MacOS ARM 64-bit built Sep 10 2026
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    SUN1012918 (SSE4.2, 48 GB RAM)
+Command: iqtree3 -s SML_S_noout_align.fasta
+Seed:    670457 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Wed Oct 28 14:16:49 2026
+Kernel:  SSE2
+
+NOTE: Consider using the multicore version because your CPU has 14 cores!
+
+Reading alignment file SML_S_noout_align.fasta ... Fasta format detected
+Reading fasta file: done in 0.000505924 secs using 87.56% CPU
+Alignment most likely contains DNA/RNA sequences
+Constructing alignment: done in 0.000740051 secs using 70.4% CPU
+Alignment has 55 sequences with 929 columns, 208 distinct patterns
+105 parsimony-informative, 48 singleton sites, 776 constant sites
+           Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 2.40803e-05 secs using 45.68% CPU
+   1  NC_018464    0.22%    passed     76.72%
+   2  PZ860854    10.01%    passed     93.09%
+   3  LC811395     9.69%    passed     99.12%
+   4  OZ516533    10.12%    passed     93.22%
+   5  OZ516536    10.12%    passed     91.43%
+   6  PZ797893    18.19%    passed     67.76%
+   7  OZ502473     9.90%    passed     93.67%
+   8  OR249959    27.77%    passed     75.33%
+   9  LC741389     9.69%    passed     99.94%
+  10  LC198185    13.24%    passed     96.83%
+  11  LC198186    13.24%    passed     98.29%
+  12  LC198187    13.24%    passed     98.29%
+  13  AB698470    13.24%    passed     99.23%
+  14  NC_043582    9.69%    passed     98.91%
+  15  LC811383     9.69%    passed     99.79%
+  16  LC811386     9.69%    passed     99.79%
+  17  LC811389     9.58%    passed     99.27%
+  18  LC811392     9.58%    passed     98.41%
+  19  PP592884     9.69%    passed     97.85%
+  20  PP626413     9.69%    passed     99.32%
+  21  OQ269478    18.19%    passed     99.90%
+  22  LC741386     9.58%    passed     99.56%
+  23  MT816483    60.50%    passed     98.32%
+  24  MT816484    71.69%    passed     64.39%
+  25  MH734987    24.43%    passed     63.68%
+  26  MH734988    24.43%    passed     69.16%
+  27  KY828197    24.43%    passed     93.31%
+  28  KY828205    24.43%    passed     97.15%
+  29  KX384858    14.10%    passed     94.39%
+  30  KX384861    14.10%    passed     94.99%
+  31  KX384864    14.10%    passed     96.23%
+  32  KX384867    14.10%    passed     94.39%
+  33  KX384870    14.10%    passed     94.99%
+  34  KX384873    14.10%    passed     94.99%
+  35  KX384876    14.10%    passed     92.61%
+  36  KP731865    11.19%    passed     98.87%
+  37  KP731866    10.66%    passed     98.24%
+  38  KP731867    10.66%    passed     99.05%
+  39  KP731868    10.66%    passed     98.24%
+  40  KP731869    10.66%    passed     98.24%
+  41  KP731870    10.66%    passed     98.24%
+  42  KF314813    52.21%    passed     97.43%
+  43  KC355456     9.69%    passed     97.77%
+  44  KC139376     9.69%    passed     95.62%
+  45  KC139377     9.69%    passed     95.62%
+  46  KC139378     9.69%    passed     95.62%
+  47  KC139379     9.69%    passed     97.77%
+  48  KC139380     9.69%    passed     97.77%
+  49  KC139381     9.69%    passed     97.77%
+  50  JX853181     9.69%    passed     98.91%
+  51  HE795092    12.49%    passed     98.95%
+  52  AB698467    13.13%    passed     98.93%
+  53  AB698468    13.13%    passed     96.71%
+  54  HE649914    10.66%    passed     98.24%
+  55  AB125371    13.13%    passed     88.99%
+WARNING: 3 sequences contain more than 50% gaps/ambiguity
+****  TOTAL       15.26%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: LC198187 is identical to LC198186 but kept for subsequent analysis
+NOTE: JX853181 is identical to NC_043582 but kept for subsequent analysis
+NOTE: LC811386 is identical to LC811383 but kept for subsequent analysis
+NOTE: KX384873 is identical to KX384870 but kept for subsequent analysis
+NOTE: KP731868 is identical to KP731866 but kept for subsequent analysis
+NOTE: KC139377 is identical to KC139376 but kept for subsequent analysis
+NOTE: KC139380 is identical to KC139379 but kept for subsequent analysis
+Checking for duplicate sequences: done in 0.00011611 secs using 49.95% CPU
+Identifying sites to remove: done in 0.000389099 secs using 95.86% CPU
+NOTE: 5 identical sequences (see below) will be ignored for subsequent analysis
+NOTE: KP731869 (identical to KP731866) is ignored but added at the end
+NOTE: KP731870 (identical to KP731866) is ignored but added at the end
+NOTE: HE649914 (identical to KP731866) is ignored but added at the end
+NOTE: KC139378 (identical to KC139376) is ignored but added at the end
+NOTE: KC139381 (identical to KC139379) is ignored but added at the end
+Alignment was printed to SML_S_noout_align.fasta.uniqueseq.phy
+
+For your convenience alignment with unique sequences printed to SML_S_noout_align.fasta.uniqueseq.phy
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.001 seconds
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -2561.379
+Optimal log-likelihood: -2561.321
+Rate parameters:  A-C: 1.59557  A-G: 20.21351  A-T: 5.27786  C-G: 0.62684  C-T: 28.53812  G-T: 1.00000
+Base frequencies:  A: 0.285  C: 0.212  G: 0.212  T: 0.291
+Proportion of invariable sites: 0.411
+Gamma shape alpha: 0.360
+Parameters optimization took 1 rounds (0.013 sec)
+Time for fast ML tree search: 0.132 seconds
+
+NOTE: ModelFinder requires 3 MB RAM!
+ModelFinder will test up to 968 DNA models (sample size: 929 epsilon: 0.100) ...
+Akaike Information Criterion:           GTR+F+G4
+Corrected Akaike Information Criterion: TIM2+F+G4
+Bayesian Information Criterion:         TPM2u+F+G4
+Best-fit model: TPM2u+F+G4 chosen according to BIC
+
+All model information printed to SML_S_noout_align.fasta.model.gz
+CPU time for ModelFinder: 6.263 seconds (0h:0m:6s)
+Wall-clock time for ModelFinder: 6.268 seconds (0h:0m:6s)
+
+NOTE: 1 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -2566.607
+2. Current log-likelihood: -2566.247
+Optimal log-likelihood: -2566.235
+Rate parameters:  A-C: 4.06959  A-G: 26.02655  A-T: 4.06959  C-G: 1.00000  C-T: 26.02655  G-T: 1.00000
+Base frequencies:  A: 0.285  C: 0.212  G: 0.212  T: 0.291
+Gamma shape alpha: 0.088
+Parameters optimization took 2 rounds (0.015 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.004071 secs using 99.75% CPU
+Computing ML distances took 0.004109 sec (of wall-clock time) 0.004088 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 4.00543e-05 secs using 72.4% CPU
+Constructing RapidNJ tree: done in 7.9155e-05 secs using 85.91% CPU
+Computing RapidNJ tree took 0.000135 sec (of wall-clock time) 0.000104 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -2569.795
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.058 second
+Computing log-likelihood of 98 initial trees ... 0.129 seconds
+Current best score: -2566.235
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -2566.234
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2: -2566.214
+BETTER TREE FOUND at iteration 7: -2566.214
+Iteration 10 / LogL: -2566.215 / Time: 0h:0m:6s
+Iteration 20 / LogL: -2566.214 / Time: 0h:0m:6s
+Finish initializing candidate tree set (20)
+Current best tree score: -2566.214 / CPU time: 0.571
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -2566.216 / Time: 0h:0m:7s (0h:0m:2s left)
+Iteration 40 / LogL: -2566.216 / Time: 0h:0m:7s (0h:0m:2s left)
+BETTER TREE FOUND at iteration 43: -2566.214
+Iteration 50 / LogL: -2566.218 / Time: 0h:0m:7s (0h:0m:3s left)
+Iteration 60 / LogL: -2591.639 / Time: 0h:0m:8s (0h:0m:2s left)
+Iteration 70 / LogL: -2574.628 / Time: 0h:0m:8s (0h:0m:2s left)
+Iteration 80 / LogL: -2566.218 / Time: 0h:0m:8s (0h:0m:2s left)
+Iteration 90 / LogL: -2567.274 / Time: 0h:0m:9s (0h:0m:1s left)
+Iteration 100 / LogL: -2566.224 / Time: 0h:0m:9s (0h:0m:1s left)
+Iteration 110 / LogL: -2566.218 / Time: 0h:0m:9s (0h:0m:1s left)
+Iteration 120 / LogL: -2601.232 / Time: 0h:0m:10s (0h:0m:0s left)
+Iteration 130 / LogL: -2566.219 / Time: 0h:0m:10s (0h:0m:0s left)
+Iteration 140 / LogL: -2566.221 / Time: 0h:0m:10s (0h:0m:0s left)
+TREE SEARCH COMPLETED AFTER 144 ITERATIONS / Time: 0h:0m:11s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -2566.214
+Optimal log-likelihood: -2566.213
+Rate parameters:  A-C: 4.03929  A-G: 26.03453  A-T: 4.03929  C-G: 1.00000  C-T: 26.03453  G-T: 1.00000
+Base frequencies:  A: 0.285  C: 0.212  G: 0.212  T: 0.291
+Gamma shape alpha: 0.087
+Parameters optimization took 1 rounds (0.004 sec)
+BEST SCORE FOUND : -2566.213
+Total tree length: 0.374
+
+Total number of iterations: 144
+CPU time used for tree search: 4.712 sec (0h:0m:4s)
+Wall-clock time used for tree search: 4.715 sec (0h:0m:4s)
+Total CPU time used: 11.010 sec (0h:0m:11s)
+Total wall-clock time used: 11.028 sec (0h:0m:11s)
+
+Analysis results written to: 
+  IQ-TREE report:                SML_S_noout_align.fasta.iqtree
+  Maximum-likelihood tree:       SML_S_noout_align.fasta.treefile
+  Likelihood distances:          SML_S_noout_align.fasta.mldist
+  Screen log file:               SML_S_noout_align.fasta.log
+
+Date and Time: Wed Oct 28 14:17:00 2026
