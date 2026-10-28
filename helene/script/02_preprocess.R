@@ -1,7 +1,7 @@
 library(tidyverse)
 library(glue)
 
-setwd("~/Documents/courses/MolecularEvolutionPhylogenomics/")
+setwd("~/Documents/courses/MolecularEvolutionPhylogenomics/shamonda_virus/")
 
 # Amanda is aligning using MAFTT 
 
@@ -18,12 +18,21 @@ meta_all_clean <- readRDS("helene/out/meta_all_clean.rds")
 # L: 6700-6800
 # meta_all_clean$Isolate
 
-meta_all_clean %>% 
-  ggplot(aes(x = Length)) + 
-  geom_histogram(position = "dodge") +
-  facet_wrap(vars(Segment), ncol = 1) + 
-  theme_bw()
+table(meta_all_clean$Segment, useNA = "always")
 
+meta_all_clean %>%
+  mutate(Segment = factor(replace_na(as.character(Segment), "Unassigned"),
+                          levels = c("S", "M", "L", "Unassigned"))) %>%
+  add_count(Segment, name = "n_seg") %>%
+  mutate(Segment_lab = fct_reorder(sprintf("%s (n = %d)", Segment, n_seg),
+                                   as.integer(Segment))) %>%
+  ggplot(aes(x = Length)) +
+  geom_histogram(bins = 60) +
+  facet_wrap(vars(Segment_lab), ncol = 1, scales = "free_y") +
+  theme_bw() +
+  labs(title = "Size of segments", x = "Sequence length (nt)", y = "Count")
+  
+ggsave("helene/plot/segment_size.png", width = 8, height = 7)
 
 # meta_all_clean$header <- glue("")
   
@@ -44,6 +53,21 @@ fasta1 <- readDNAStringSet("data/sequences_shamonda.fasta")             # Shamon
 fasta2 <- readDNAStringSet("data/sequences_Schmallenbergvirus1.fasta")  # Orthobunyavirus schmallenbergense, taxid 3052437
 fasta3 <- readDNAStringSet("data/sequences_Schmallenbergvirus2.fasta")  # Schmallenberg virus, taxid 1133363
 
+
+# # test
+# names(seqs_all)
+# 
+# meta_all_clean$Accession %>% length()
+# meta_all_clean$Accession %>% unique() %>% length()
+# 
+# meta_all_clean %>% arrange(Accession) %>% view()
+# AB183279
+# seqs_all$`AB183279.1 ||Japan:Miyazaki|`
+# seqs_all$`AB183279.1 ||Japan:Miyazaki|`
+
+grep("AB183279", names(seqs_all), value = TRUE)
+
+# Combine sequnces 
 seqs_all <- c(fasta1, fasta2, fasta3)
 names(seqs_all) <- str_extract(names(seqs_all), "^[^.\\s]+")
 
@@ -59,12 +83,24 @@ seqs_by_seg <- map(segment, ~ seqs_all[names(seqs_all) %in% .x])
 map_int(seqs_by_seg, length)
 map_int(segment, length)
 
-# Export 
-names(seqs_by_seg)
+# Add sabo S, M and L as out groups
+fasta_out_group <- list(
+  "S" = readDNAStringSet("data/sequences_sabo_S.fasta"), 
+  "M" = readDNAStringSet("data/sequences_sabo_M.fasta"), 
+  "L" = readDNAStringSet("data/sequences_sabo_L.fasta")
+)
 
-lapply(names(seqs_by_seg), function(seg){
+# Export 
+
+lapply(names(fasta_out_group), function(seg){
   
-  writeXStringSet(seqs_by_seg[[seg]], glue("helene/out/{seg}.fasta"))
+  # seg <- "L"
+  out_group <- fasta_out_group[[seg]]
+  names(out_group) <- names(out_group) %>% str_split_i("\\|", 1) %>% str_trim()
+  comb <- c(seqs_by_seg[[seg]], out_group)
+
+  writeXStringSet(comb, glue("helene/out/{seg}.fasta"))
+  # writeXStringSet(seqs_by_seg[[seg]], glue("helene/out/{seg}.fasta"))
   
 })
 
@@ -83,28 +119,7 @@ lapply(names(seqs_by_seg), function(seg){
   
 })
 
+length(seqs_by_seg[["NA"]])
 
-
-
-
-
-
-
-
-
-seqs_all <- c(fasta1, fasta2, fasta3)
-
-# segment assignment from the FASTA headers, adjust pattern to what yours look like
-seg <- case_when(
-  str_detect(names(seqs_all), regex("segment S|nucleocapsid|\\bN\\b", ignore_case = TRUE)) ~ "S",
-  str_detect(names(seqs_all), regex("segment M|glycoprotein|polyprotein", ignore_case = TRUE)) ~ "M",
-  str_detect(names(seqs_all), regex("segment L|polymerase|RdRp",         ignore_case = TRUE)) ~ "L",
-  TRUE ~ NA_character_
-)
-table(seg, useNA = "ifany")
-
-seg <- cut(width(seqs_all),
-           breaks = c(0, 2000, 5500, Inf),
-           labels = c("S", "M", "L"))
 
 

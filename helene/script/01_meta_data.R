@@ -1,6 +1,6 @@
 library(tidyverse)
 
-setwd("~/Documents/courses/MolecularEvolutionPhylogenomics/")
+setwd("~/Documents/courses/MolecularEvolutionPhylogenomics/shamonda_virus/")
 
 # ------------------------------------------------------------------------------
 # Load data 
@@ -62,6 +62,6 @@ meta_all_clean <- meta_all %>%
 meta_all_clean$Country %>% table()
 
 saveRDS(meta_all_clean, "helene/out/meta_all_clean.rds")
-
+write_csv(meta_all_clean, "helene/out/meta_all_clean.csv")
 
 
