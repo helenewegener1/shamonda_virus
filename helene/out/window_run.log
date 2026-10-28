@@ -1,0 +1,16 @@
+Alignment: SML_M_noout_align.fasta
+Length:    4605 columns
+Window:    500
+
+  1-500 -> files_for_mast/SML_M_noout_align_w0001_0500.fasta
+  501-1000 -> files_for_mast/SML_M_noout_align_w0501_1000.fasta
+  1001-1500 -> files_for_mast/SML_M_noout_align_w1001_1500.fasta
+  1501-2000 -> files_for_mast/SML_M_noout_align_w1501_2000.fasta
+  2001-2500 -> files_for_mast/SML_M_noout_align_w2001_2500.fasta
+  2501-3000 -> files_for_mast/SML_M_noout_align_w2501_3000.fasta
+  3001-3500 -> files_for_mast/SML_M_noout_align_w3001_3500.fasta
+  3501-4000 -> files_for_mast/SML_M_noout_align_w3501_4000.fasta
+  4001-4500 -> files_for_mast/SML_M_noout_align_w4001_4500.fasta
+  4501-4605 -> files_for_mast/SML_M_noout_align_w4501_4605.fasta
+
+=== SML_M_noout_align_w0001_0500.fasta ===

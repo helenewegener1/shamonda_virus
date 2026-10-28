@@ -1,0 +1,85 @@
+IQ-TREE single-core version 3.1.4 for MacOS ARM 64-bit built Sep 10 2026
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    SUN1012918 (SSE4.2, 48 GB RAM)
+Command: iqtree3 -s SML_M_noout_align_w0501_1000.fasta --redo
+Seed:    409889 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Wed Oct 28 14:58:24 2026
+Kernel:  SSE2
+
+NOTE: Consider using the multicore version because your CPU has 14 cores!
+
+Reading alignment file SML_M_noout_align_w0501_1000.fasta ... Fasta format detected
+Reading fasta file: done in 0.00060606 secs using 87.95% CPU
+Alignment most likely contains DNA/RNA sequences
+Constructing alignment: done in 0.000823975 secs using 72.82% CPU
+Alignment has 55 sequences with 500 columns, 172 distinct patterns
+255 parsimony-informative, 11 singleton sites, 234 constant sites
+           Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 2.5034e-05 secs using 83.89% CPU
+   1  NC_018467    0.00%    passed     67.67%
+   2  PZ860853     3.20%    passed     85.51%
+   3  LC811396     0.00%    passed     58.36%
+   4  OZ516532     0.00%    passed     73.88%
+   5  OZ516535     0.00%    passed     73.88%
+   6  PZ797892     0.00%    passed     73.88%
+   7  OZ502472     0.00%    passed     73.88%
+   8  OR249960   100.00%    passed       nan%
+   9  LC741388     0.00%    passed     60.94%
+  10  LC198188     0.00%    passed     58.36%
+  11  LC198189     0.00%    passed     58.36%
+  12  LC198190     0.00%    passed     58.36%
+  13  AB698477     0.00%    passed     80.32%
+  14  NC_043584    0.00%    passed     96.77%
+  15  LC811384     0.00%    passed     75.10%
+  16  LC811387     0.00%    passed     76.19%
+  17  LC811390     0.00%    passed     95.57%
+  18  LC811393     0.00%    passed     95.76%
+  19  PP592885     0.00%    passed     92.99%
+  20  PP616750     0.00%    passed     92.86%
+  21  OQ269479   100.00%    passed       nan%
+  22  LC741385     0.00%    passed     62.56%
+  23  MT816472   100.00%    passed       nan%
+  24  MT816473   100.00%    passed       nan%
+  25  MH735044     0.00%    passed     90.20%
+  26  MH735045     0.00%    passed     73.07%
+  27  KY828192     0.00%    passed     96.77%
+  28  MF993071   100.00%    passed       nan%
+  29  KX384857     0.00%    passed     95.64%
+  30  KX384860     0.00%    passed     93.69%
+  31  KX384863     0.00%    passed     93.69%
+  32  KX384866     0.00%    passed     96.77%
+  33  KX384869     0.00%    passed     95.64%
+  34  KX384872     0.00%    passed     95.64%
+  35  KX384875     0.00%    passed     96.77%
+  36  KP731871     0.00%    passed     96.77%
+  37  KP731872     0.00%    passed     96.77%
+  38  KP731873     0.00%    passed     96.77%
+  39  KP731874     0.00%    passed     96.92%
+  40  KP731875     0.00%    passed     96.92%
+  41  KP731876     0.00%    passed     96.92%
+  42  KF314814   100.00%    passed       nan%
+  43  KC355455     0.00%    passed     96.77%
+  44  KC139368     0.00%    passed     96.77%
+  45  KC139369     0.00%    passed     96.77%
+  46  KC139370     0.00%    passed     96.77%
+  47  KC139372     0.00%    passed     95.92%
+  48  KC139373     0.00%    passed     96.77%
+  49  KC139374     0.00%    passed     96.77%
+  50  JX853180     0.00%    passed     94.14%
+  51  HE795091     0.00%    passed     86.95%
+  52  AB698471     0.00%    passed     85.84%
+  53  AB698472     0.00%    passed     69.53%
+  54  AB698473     0.00%    passed     82.31%
+  55  HE649913     0.00%    passed     94.14%
+WARNING: 6 sequences contain more than 50% gaps/ambiguity
+****  TOTAL       10.97%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+WARNING: Sequence OR249960 contains only gaps or missing data
+WARNING: Sequence OQ269479 contains only gaps or missing data
+WARNING: Sequence MT816472 contains only gaps or missing data
+WARNING: Sequence MT816473 contains only gaps or missing data
+WARNING: Sequence MF993071 contains only gaps or missing data
+WARNING: Sequence KF314814 contains only gaps or missing data
+ERROR: Some sequences (see above) are problematic, please check your alignment again
