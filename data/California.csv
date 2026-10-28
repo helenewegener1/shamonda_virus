@@ -1,0 +1,4 @@
+Accession,Organism_Name,Species,Genotype,Isolate,Length,Nuc_Completeness,Geo_Location,Host,Tissue_Specimen_Source,Submitters,Publications,Collection_Date,Release_Date,Molecule_type
+NC_055117,California encephalitis virus,Orthobunyavirus encephalitidis,,,978,complete,USA: California,Ochlerotatus dorsalis,,,,1943,2021-06-01,ssRNA(-)
+NC_055118,California encephalitis virus,Orthobunyavirus encephalitidis,,,4510,complete,USA: California,Ochlerotatus dorsalis,,,,1943,2021-06-01,ssRNA(-)
+NC_055119,California encephalitis virus,Orthobunyavirus encephalitidis,,,6978,complete,USA: California,Ochlerotatus dorsalis,,,,1943,2021-06-01,ssRNA(-)

@@ -36,7 +36,7 @@ ggsave("helene/plot/segment_size.png", width = 8, height = 7)
 
 # meta_all_clean$header <- glue("")
   
-# 
+# Divide accession numbers in segments 
 segment <- list()
 segment[["L"]] <- meta_all_clean %>% filter(Segment == "L") %>% select(Accession) %>% pull()
 segment[["S"]] <- meta_all_clean %>% filter(Segment == "S") %>% select(Accession) %>% pull()
@@ -69,6 +69,7 @@ grep("AB183279", names(seqs_all), value = TRUE)
 
 # Combine sequnces 
 seqs_all <- c(fasta1, fasta2, fasta3)
+
 names(seqs_all) <- str_extract(names(seqs_all), "^[^.\\s]+")
 
 # drop duplicates in case the three taxid queries overlap

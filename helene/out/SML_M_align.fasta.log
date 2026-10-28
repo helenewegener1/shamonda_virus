@@ -1,0 +1,224 @@
+IQ-TREE single-core version 3.1.4 for MacOS ARM 64-bit built Sep 10 2026
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    SUN1012918 (SSE4.2, 48 GB RAM)
+Command: iqtree3 -s SML_M_align.fasta
+Seed:    685901 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Wed Oct 28 12:07:02 2026
+Kernel:  SSE2
+
+NOTE: Consider using the multicore version because your CPU has 14 cores!
+
+Reading alignment file SML_M_align.fasta ... Fasta format detected
+Reading fasta file: done in 0.00236988 secs using 90.68% CPU
+Alignment most likely contains DNA/RNA sequences
+Constructing alignment: done in 0.00335002 secs using 74.06% CPU
+Alignment has 56 sequences with 4834 columns, 2165 distinct patterns
+2550 parsimony-informative, 673 singleton sites, 1611 constant sites
+              Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 0.000139952 secs using 99.32% CPU
+   1  NC_018467      10.76%    passed     74.10%
+   2  PZ860853       14.32%    passed     87.05%
+   3  LC811396       10.74%    passed     90.62%
+   4  OZ516532       10.74%    passed     69.74%
+   5  OZ516535       11.32%    passed     73.69%
+   6  PZ797892       11.03%    passed     70.75%
+   7  OZ502472       11.03%    passed     68.02%
+   8  OR249960       91.29%    passed     39.47%
+   9  LC741388       10.74%    passed     89.39%
+  10  LC198188       11.36%    passed     92.32%
+  11  LC198189       11.32%    passed     91.09%
+  12  LC198190       11.34%    passed     90.84%
+  13  AB698477       11.34%    passed     85.82%
+  14  NC_043584       9.54%    passed     99.59%
+  15  LC811384        9.72%    passed     49.05%
+  16  LC811387        9.72%    passed     50.45%
+  17  LC811390        9.68%    passed     73.29%
+  18  LC811393        9.70%    passed     78.20%
+  19  PP592885        9.54%    passed     99.42%
+  20  PP616750       21.02%    passed     99.53%
+  21  OQ269479       83.70%    passed      6.87%
+  22  LC741385        9.68%    passed     44.44%
+  23  MT816472       92.06%    passed      7.68%
+  24  MT816473       92.06%    passed      7.68%
+  25  MH735044       12.87%    passed     92.94%
+  26  MH735045       12.87%    passed     92.65%
+  27  KY828192       10.16%    passed     98.57%
+  28  MF993071       82.73%    passed     96.92%
+  29  KX384857        9.70%    passed     99.48%
+  30  KX384860        9.54%    passed     99.41%
+  31  KX384863        9.54%    passed     99.81%
+  32  KX384866        9.54%    passed     99.65%
+  33  KX384869        9.54%    passed     99.73%
+  34  KX384872        9.54%    passed     99.73%
+  35  KX384875        9.54%    passed     99.69%
+  36  KP731871       12.87%    passed     94.15%
+  37  KP731872       12.87%    passed     91.53%
+  38  KP731873       12.87%    passed     93.22%
+  39  KP731874       12.87%    passed     93.08%
+  40  KP731875       12.87%    passed     93.08%
+  41  KP731876       12.87%    passed     92.15%
+  42  KF314814       92.33%    passed     20.43%
+  43  KC355455        9.54%    passed     99.81%
+  44  KC139368        9.54%    passed     99.86%
+  45  KC139369        9.54%    passed     99.77%
+  46  KC139370        9.54%    passed     99.82%
+  47  KC139372        9.54%    passed     99.82%
+  48  KC139373        9.54%    passed     99.84%
+  49  KC139374        9.54%    passed     99.89%
+  50  JX853180        9.54%    passed     99.83%
+  51  HE795091        9.70%    passed     93.60%
+  52  AB698471       10.28%    passed     65.67%
+  53  AB698472       10.26%    passed     36.05%
+  54  AB698473       10.28%    passed     50.45%
+  55  HE649913        8.67%    passed     98.62%
+  56  California_M    6.70%    failed      0.00%
+WARNING: 6 sequences contain more than 50% gaps/ambiguity
+****  TOTAL          19.12%  1 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: MT816473 is identical to MT816472 but kept for subsequent analysis
+NOTE: KX384872 is identical to KX384869 but kept for subsequent analysis
+Checking for duplicate sequences: done in 0.000222921 secs using 87.47% CPU
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.003 seconds
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -28362.509
+Optimal log-likelihood: -28361.350
+Rate parameters:  A-C: 1.82500  A-G: 15.42254  A-T: 1.34178  C-G: 2.16682  C-T: 23.01552  G-T: 1.00000
+Base frequencies:  A: 0.355  C: 0.173  G: 0.179  T: 0.293
+Proportion of invariable sites: 0.190
+Gamma shape alpha: 1.783
+Parameters optimization took 1 rounds (0.102 sec)
+Time for fast ML tree search: 1.513 seconds
+
+NOTE: ModelFinder requires 39 MB RAM!
+ModelFinder will test up to 968 DNA models (sample size: 4834 epsilon: 0.100) ...
+Akaike Information Criterion:           TIM3+F+I+R2
+Corrected Akaike Information Criterion: TIM3+F+I+R2
+Bayesian Information Criterion:         TIM3+F+I+R2
+Best-fit model: TIM3+F+I+R2 chosen according to BIC
+
+All model information printed to SML_M_align.fasta.model.gz
+CPU time for ModelFinder: 28.703 seconds (0h:0m:28s)
+Wall-clock time for ModelFinder: 28.719 seconds (0h:0m:28s)
+
+NOTE: 7 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -28332.889
+2. Current log-likelihood: -28332.693
+Optimal log-likelihood: -28332.625
+Rate parameters:  A-C: 1.47988  A-G: 15.20932  A-T: 1.00000  C-G: 1.47988  C-T: 22.80510  G-T: 1.00000
+Base frequencies:  A: 0.355  C: 0.173  G: 0.179  T: 0.293
+Proportion of invariable sites: 0.207
+Site proportion and rates:  (0.628,0.670) (0.166,3.499)
+Parameters optimization took 2 rounds (0.082 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.00683498 secs using 99.82% CPU
+Computing ML distances took 0.007059 sec (of wall-clock time) 0.007034 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 4.50611e-05 secs using 75.45% CPU
+Constructing RapidNJ tree: done in 8.4877e-05 secs using 89.54% CPU
+Computing RapidNJ tree took 0.000144 sec (of wall-clock time) 0.000117 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -28415.769
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.352 second
+Computing log-likelihood of 98 initial trees ... 0.842 seconds
+Current best score: -28332.625
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -28332.564
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 3: -28328.799
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 6: -28327.875
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 7: -28327.420
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 8: -28327.167
+Iteration 10 / LogL: -28327.189 / Time: 0h:0m:32s
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 18: -28327.058
+Iteration 20 / LogL: -28330.555 / Time: 0h:0m:35s
+Finish initializing candidate tree set (20)
+Current best tree score: -28327.058 / CPU time: 6.333
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 22: -28326.354
+Iteration 30 / LogL: -28331.896 / Time: 0h:0m:38s (0h:0m:31s left)
+Iteration 40 / LogL: -28326.389 / Time: 0h:0m:42s (0h:0m:29s left)
+Iteration 50 / LogL: -28326.382 / Time: 0h:0m:47s (0h:0m:26s left)
+Iteration 60 / LogL: -28326.437 / Time: 0h:0m:51s (0h:0m:24s left)
+Iteration 70 / LogL: -28352.671 / Time: 0h:0m:56s (0h:0m:20s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 78: -28326.323
+Iteration 80 / LogL: -28326.324 / Time: 0h:0m:59s (0h:0m:37s left)
+BETTER TREE FOUND at iteration 81: -28326.322
+Iteration 90 / LogL: -28802.957 / Time: 0h:1m:2s (0h:0m:34s left)
+BETTER TREE FOUND at iteration 100: -28326.319
+Iteration 100 / LogL: -28326.319 / Time: 0h:1m:6s (0h:0m:38s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 108: -28325.721
+Iteration 110 / LogL: -28326.760 / Time: 0h:1m:10s (0h:0m:37s left)
+Iteration 120 / LogL: -28326.232 / Time: 0h:1m:14s (0h:0m:33s left)
+Iteration 130 / LogL: -28373.746 / Time: 0h:1m:17s (0h:0m:29s left)
+Iteration 140 / LogL: -28326.485 / Time: 0h:1m:20s (0h:0m:25s left)
+Iteration 150 / LogL: -28403.162 / Time: 0h:1m:22s (0h:0m:20s left)
+Iteration 160 / LogL: -28327.121 / Time: 0h:1m:25s (0h:0m:17s left)
+Iteration 170 / LogL: -28351.974 / Time: 0h:1m:28s (0h:0m:13s left)
+Iteration 180 / LogL: -28635.658 / Time: 0h:1m:32s (0h:0m:9s left)
+UPDATE BEST LOG-LIKELIHOOD: -28325.717
+Iteration 190 / LogL: -28384.119 / Time: 0h:1m:35s (0h:0m:6s left)
+Iteration 200 / LogL: -28326.741 / Time: 0h:1m:38s (0h:0m:2s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 203: -28324.941
+Iteration 210 / LogL: -28333.706 / Time: 0h:1m:41s (0h:0m:32s left)
+Iteration 220 / LogL: -28325.525 / Time: 0h:1m:43s (0h:0m:28s left)
+Iteration 230 / LogL: -28358.288 / Time: 0h:1m:46s (0h:0m:24s left)
+Iteration 240 / LogL: -28327.903 / Time: 0h:1m:49s (0h:0m:21s left)
+Iteration 250 / LogL: -28327.858 / Time: 0h:1m:52s (0h:0m:17s left)
+Iteration 260 / LogL: -28329.001 / Time: 0h:1m:56s (0h:0m:14s left)
+Iteration 270 / LogL: -28325.366 / Time: 0h:1m:59s (0h:0m:11s left)
+Iteration 280 / LogL: -28327.035 / Time: 0h:2m:2s (0h:0m:7s left)
+Iteration 290 / LogL: -28326.641 / Time: 0h:2m:5s (0h:0m:4s left)
+Iteration 300 / LogL: -28328.433 / Time: 0h:2m:8s (0h:0m:1s left)
+TREE SEARCH COMPLETED AFTER 304 ITERATIONS / Time: 0h:2m:9s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -28324.941
+Optimal log-likelihood: -28324.929
+Rate parameters:  A-C: 1.49205  A-G: 15.10578  A-T: 1.00000  C-G: 1.49205  C-T: 22.83853  G-T: 1.00000
+Base frequencies:  A: 0.355  C: 0.173  G: 0.179  T: 0.293
+Proportion of invariable sites: 0.207
+Site proportion and rates:  (0.631,0.682) (0.162,3.513)
+Parameters optimization took 1 rounds (0.039 sec)
+BEST SCORE FOUND : -28324.929
+Total tree length: 11.176
+
+Total number of iterations: 304
+CPU time used for tree search: 100.883 sec (0h:1m:40s)
+Wall-clock time used for tree search: 100.935 sec (0h:1m:40s)
+Total CPU time used: 129.771 sec (0h:2m:9s)
+Total wall-clock time used: 129.849 sec (0h:2m:9s)
+
+Analysis results written to: 
+  IQ-TREE report:                SML_M_align.fasta.iqtree
+  Maximum-likelihood tree:       SML_M_align.fasta.treefile
+  Likelihood distances:          SML_M_align.fasta.mldist
+  Screen log file:               SML_M_align.fasta.log
+
+Date and Time: Wed Oct 28 12:09:12 2026

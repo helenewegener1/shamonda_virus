@@ -1,0 +1,12 @@
+IQ-TREE single-core version 3.1.4 for MacOS ARM 64-bit built Sep 10 2026
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    SUN1012918 (SSE4.2, 48 GB RAM)
+Command: iqtree3 -s SML_L_align.fasta -B 1000 -T AUTO --prefix SML_L
+Seed:    652620 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Wed Oct 28 12:02:48 2026
+Kernel:  SSE2
+
+ERROR: Number of threads must be 1 for sequential version.
