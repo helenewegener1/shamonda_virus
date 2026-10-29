@@ -5,21 +5,21 @@ Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
 
 Host:    DTU-C14VJM6QFV.local (SSE4.2, 36 GB RAM)
 Command: iqtree3 -s files_for_mast/SML_L_noout_align_rtex_w0001_0500.fasta -redo
-Seed:    167223 (Using SPRNG - Scalable Parallel Random Number Generator)
-Time:    Thu Oct 29 11:54:16 2026
+Seed:    979240 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Thu Oct 29 14:25:53 2026
 Kernel:  SSE2 - 1 threads (14 CPU cores detected)
 
 HINT: Use -nt option to specify number of threads because your CPU has 14 cores!
 HINT: -nt AUTO will automatically determine the best number of threads to use.
 
 Reading alignment file files_for_mast/SML_L_noout_align_rtex_w0001_0500.fasta ... Fasta format detected
-Reading fasta file: done in 0.000174046 secs using 91.93% CPU
+Reading fasta file: done in 0.000174999 secs using 91.43% CPU
 Alignment most likely contains DNA/RNA sequences
-Constructing alignment: done in 0.000175953 secs using 63.09% CPU
+Constructing alignment: done in 0.000175953 secs using 61.38% CPU
 Alignment has 41 sequences with 500 columns, 119 distinct patterns
 133 parsimony-informative, 14 singleton sites, 353 constant sites
            Gap/Ambiguity  Composition  p-value
-Analyzing sequences: done in 5.96046e-06 secs using 83.89% CPU
+Analyzing sequences: done in 5.00679e-06 secs using 79.89% CPU
    1  KC355454     0.00%    passed     99.70%
    2  OZ502471     0.00%    passed     98.59%
    3  KX384868     0.00%    passed     99.70%
@@ -67,8 +67,8 @@ NOTE: OZ516534 is identical to OZ502471 but kept for subsequent analysis
 NOTE: LC811385 is identical to LC811388 but kept for subsequent analysis
 NOTE: KP731878 is identical to KP731877 but kept for subsequent analysis
 NOTE: KC139365 is identical to KC139366 but kept for subsequent analysis
-Checking for duplicate sequences: done in 5.4121e-05 secs using 51.74% CPU
-Identifying sites to remove: done in 9.48906e-05 secs using 95.9% CPU
+Checking for duplicate sequences: done in 5.4121e-05 secs using 53.58% CPU
+Identifying sites to remove: done in 9.20296e-05 secs using 98.88% CPU
 NOTE: 14 identical sequences (see below) will be ignored for subsequent analysis
 NOTE: JX853179 (identical to KC355454) is ignored but added at the end
 NOTE: KX384865 (identical to KC355454) is ignored but added at the end
@@ -99,7 +99,7 @@ Perform nearest neighbor interchange...
 Estimate model parameters (epsilon = 1.000)
 1. Initial log-likelihood: -1726.263
 Optimal log-likelihood: -1726.237
-Rate parameters:  A-C: 6.69804  A-G: 64.44924  A-T: 1.57293  C-G: 4.36277  C-T: 100.00000  G-T: 1.00000
+Rate parameters:  A-C: 6.69794  A-G: 64.45063  A-T: 1.57219  C-G: 4.36248  C-T: 100.00000  G-T: 1.00000
 Warning! Some parameters hit the boundaries
 Base frequencies:  A: 0.302  C: 0.192  G: 0.187  T: 0.319
 Proportion of invariable sites: 0.335
@@ -108,7 +108,7 @@ Parameters optimization took 1 rounds (0.007 sec)
 
 WARNING: Estimated model parameters are at boundary that can cause numerical instability!
 
-Time for fast ML tree search: 0.029 seconds
+Time for fast ML tree search: 0.030 seconds
 
 NOTE: ModelFinder requires 1 MB RAM!
 ModelFinder will test up to 968 DNA models (sample size: 500 epsilon: 0.100) ...
@@ -132,8 +132,8 @@ ModelFinder will test up to 968 DNA models (sample size: 500 epsilon: 0.100) ...
  27  JC+R2         1929.965     53  3965.929     3978.764     4189.304
  46  F81+I         1929.687     52  3963.375     3975.706     4182.534
  47  F81+G4        1931.006     52  3966.013     3978.344     4185.172
- 48  F81+I+G4      1931.489     53  3968.977     3981.811     4192.352
- 49  F81+R2        1929.946     53  3965.891     3978.725     4189.266
+ 48  F81+I+G4      1931.489     53  3968.977     3981.812     4192.352
+ 49  F81+R2        1929.946     53  3965.891     3978.725     4189.265
  68  F81+F+I       1917.436     55  3944.872     3958.746     4176.675
  69  F81+F+G4      1919.079     55  3948.159     3962.033     4179.962
  70  F81+F+I+G4    1919.650     56  3951.299     3965.710     4187.317
@@ -163,12 +163,12 @@ ModelFinder will test up to 968 DNA models (sample size: 500 epsilon: 0.100) ...
 202  TNe+I+G4      1753.129     55  3616.257     3630.131     3848.061
 203  TNe+R2        1752.595     55  3615.190     3629.063     3846.993
 222  TN+I          1770.616     54  3649.233     3662.581     3876.821
-223  TN+G4         1752.710     54  3613.420     3626.768     3841.009
+223  TN+G4         1752.710     54  3613.420     3626.769     3841.009
 224  TN+I+G4       1753.127     55  3616.253     3630.127     3848.057
 225  TN+R2         1752.546     55  3615.092     3628.966     3846.895
 244  TN+F+I        1728.853     57  3571.706     3586.665     3811.939
 245  TN+F+G4       1727.816     57  3569.632     3584.591     3809.865
-246  TN+F+I+G4     1728.750     58  3573.501     3589.020     3817.948
+246  TN+F+I+G4     1728.750     58  3573.500     3589.020     3817.948
 247  TN+F+R2       1727.573     58  3571.147     3586.666     3815.594
 266  K3P+I         1755.311     54  3618.623     3631.971     3846.212
 267  K3P+G4        1754.492     54  3616.983     3630.331     3844.572
@@ -232,7 +232,7 @@ ModelFinder will test up to 968 DNA models (sample size: 500 epsilon: 0.100) ...
 577  TIM+R2        1752.445     56  3616.891     3631.302     3852.909
 596  TIM+F+I       1728.793     58  3573.586     3589.106     3818.034
 597  TIM+F+G4      1727.738     58  3571.475     3586.995     3815.923
-598  TIM+F+I+G4    1728.674     59  3575.348     3591.438     3824.009
+598  TIM+F+I+G4    1728.674     59  3575.347     3591.438     3824.009
 599  TIM+F+R2      1727.497     59  3572.994     3589.085     3821.656
 618  TIM2e+I       1753.177     55  3616.354     3630.228     3848.158
 619  TIM2e+G4      1751.405     55  3612.809     3626.683     3844.613
@@ -252,11 +252,11 @@ ModelFinder will test up to 968 DNA models (sample size: 500 epsilon: 0.100) ...
 687  TIM2+F+R2     1727.289     59  3572.578     3588.669     3821.240
 706  TIM3e+I       1753.224     55  3616.448     3630.322     3848.251
 707  TIM3e+G4      1751.737     55  3613.474     3627.348     3845.277
-708  TIM3e+I+G4    1752.252     56  3616.503     3630.914     3852.521
+708  TIM3e+I+G4    1752.251     56  3616.503     3630.914     3852.521
 709  TIM3e+R2      1751.606     56  3615.211     3629.622     3851.229
 728  TIM3e+I       1753.224     55  3616.448     3630.322     3848.251
 729  TIM3e+G4      1751.737     55  3613.474     3627.348     3845.277
-730  TIM3e+I+G4    1752.252     56  3616.503     3630.914     3852.521
+730  TIM3e+I+G4    1752.251     56  3616.503     3630.914     3852.521
 731  TIM3e+R2      1751.606     56  3615.211     3629.622     3851.229
 750  TIM3+I        1753.224     55  3616.448     3630.322     3848.251
 751  TIM3+G4       1751.737     55  3613.473     3627.347     3845.277
@@ -293,7 +293,7 @@ ModelFinder will test up to 968 DNA models (sample size: 500 epsilon: 0.100) ...
 926  GTR+I         1752.002     57  3618.003     3632.962     3858.236
 927  GTR+G4        1750.453     57  3614.907     3629.866     3855.139
 928  GTR+I+G4      1750.919     58  3617.838     3633.357     3862.285
-929  GTR+R2        1750.227     58  3616.453     3631.973     3860.901
+929  GTR+R2        1750.227     58  3616.453     3631.973     3860.900
 948  GTR+F+I       1726.514     60  3573.028     3589.702     3825.904
 949  GTR+F+G4      1725.260     60  3570.520     3587.194     3823.397
 950  GTR+F+I+G4    1726.211     61  3574.421     3591.691     3831.513
@@ -304,83 +304,73 @@ Bayesian Information Criterion:         HKY+F+I
 Best-fit model: HKY+F+I chosen according to BIC
 
 All model information printed to files_for_mast/SML_L_noout_align_rtex_w0001_0500.fasta.model.gz
-CPU time for ModelFinder: 0.781 seconds (0h:0m:0s)
-Wall-clock time for ModelFinder: 0.786 seconds (0h:0m:0s)
+CPU time for ModelFinder: 0.796 seconds (0h:0m:0s)
+Wall-clock time for ModelFinder: 0.801 seconds (0h:0m:0s)
 
 NOTE: 0 MB RAM (0 GB) is required!
 Estimate model parameters (epsilon = 0.100)
 1. Initial log-likelihood: -1730.297
 2. Current log-likelihood: -1729.635
 Optimal log-likelihood: -1729.609
-Rate parameters:  A-C: 1.00000  A-G: 27.10110  A-T: 1.00000  C-G: 1.00000  C-T: 27.10110  G-T: 1.00000
+Rate parameters:  A-C: 1.00000  A-G: 27.10111  A-T: 1.00000  C-G: 1.00000  C-T: 27.10111  G-T: 1.00000
 Base frequencies:  A: 0.302  C: 0.192  G: 0.187  T: 0.319
 Proportion of invariable sites: 0.638
 Parameters optimization took 2 rounds (0.001 sec)
 Wrote distance file to... 
 Computing ML distances based on estimated model parameters...
-Calculating distance matrix: done in 0.000315905 secs using 98.76% CPU
-Computing ML distances took 0.000335 sec (of wall-clock time) 0.000326 sec (of CPU time)
-Setting up auxiliary I and S matrices: done in 2.31266e-05 secs using 69.18% CPU
-Constructing RapidNJ tree: done in 3.79086e-05 secs using 89.69% CPU
-Computing RapidNJ tree took 0.000086 sec (of wall-clock time) 0.000061 sec (of CPU time)
+Calculating distance matrix: done in 0.000316143 secs using 98.69% CPU
+Computing ML distances took 0.000339 sec (of wall-clock time) 0.000327 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 2.5034e-05 secs using 75.9% CPU
+Constructing RapidNJ tree: done in 3.88622e-05 secs using 92.63% CPU
+Computing RapidNJ tree took 0.000088 sec (of wall-clock time) 0.000064 sec (of CPU time)
 Log-likelihood of RapidNJ tree: -1731.947
 --------------------------------------------------------------------
 |             INITIALIZING CANDIDATE TREE SET                      |
 --------------------------------------------------------------------
-Generating 98 parsimony trees... 0.028 second
-Computing log-likelihood of 98 initial trees ... 0.020 seconds
+Generating 98 parsimony trees... 0.027 second
+Computing log-likelihood of 98 initial trees ... 0.021 seconds
 Current best score: -1729.609
 
 Do NNI search on 20 best initial trees
 Estimate model parameters (epsilon = 0.100)
 BETTER TREE FOUND at iteration 1: -1729.608
-Iteration 10 / LogL: -1729.644 / Time: 0h:0m:0s
-Iteration 20 / LogL: -1729.644 / Time: 0h:0m:0s
-Finish initializing candidate tree set (20)
-Current best tree score: -1729.608 / CPU time: 0.087
+Iteration 10 / LogL: -1729.614 / Time: 0h:0m:0s
+Iteration 20 / LogL: -1729.614 / Time: 0h:0m:0s
+Finish initializing candidate tree set (19)
+Current best tree score: -1729.608 / CPU time: 0.093
 Number of iterations: 20
 --------------------------------------------------------------------
 |               OPTIMIZING CANDIDATE TREE SET                      |
 --------------------------------------------------------------------
-Iteration 30 / LogL: -1741.033 / Time: 0h:0m:0s (0h:0m:0s left)
-Iteration 40 / LogL: -1729.614 / Time: 0h:0m:0s (0h:0m:0s left)
-Iteration 50 / LogL: -1731.741 / Time: 0h:0m:1s (0h:0m:0s left)
-Iteration 60 / LogL: -1764.030 / Time: 0h:0m:1s (0h:0m:0s left)
-Iteration 70 / LogL: -1729.647 / Time: 0h:0m:1s (0h:0m:0s left)
-Iteration 80 / LogL: -1756.689 / Time: 0h:0m:1s (0h:0m:0s left)
-Iteration 90 / LogL: -1729.614 / Time: 0h:0m:1s (0h:0m:0s left)
-BETTER TREE FOUND at iteration 93: -1729.607
+Iteration 30 / LogL: -1729.618 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 40 / LogL: -1729.620 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 50 / LogL: -1729.654 / Time: 0h:0m:1s (0h:0m:0s left)
+Iteration 60 / LogL: -1729.614 / Time: 0h:0m:1s (0h:0m:0s left)
+Iteration 70 / LogL: -1729.619 / Time: 0h:0m:1s (0h:0m:0s left)
+Iteration 80 / LogL: -1781.943 / Time: 0h:0m:1s (0h:0m:0s left)
+Iteration 90 / LogL: -1729.684 / Time: 0h:0m:1s (0h:0m:0s left)
 Iteration 100 / LogL: -1729.618 / Time: 0h:0m:1s (0h:0m:0s left)
-Iteration 110 / LogL: -1729.801 / Time: 0h:0m:1s (0h:0m:0s left)
-Iteration 120 / LogL: -1729.621 / Time: 0h:0m:1s (0h:0m:0s left)
-Iteration 130 / LogL: -1749.566 / Time: 0h:0m:1s (0h:0m:0s left)
-Iteration 140 / LogL: -1729.613 / Time: 0h:0m:1s (0h:0m:0s left)
-Iteration 150 / LogL: -1729.624 / Time: 0h:0m:1s (0h:0m:0s left)
-Iteration 160 / LogL: -1729.611 / Time: 0h:0m:1s (0h:0m:0s left)
-Iteration 170 / LogL: -1729.611 / Time: 0h:0m:1s (0h:0m:0s left)
-Iteration 180 / LogL: -1729.626 / Time: 0h:0m:1s (0h:0m:0s left)
-Iteration 190 / LogL: -1781.755 / Time: 0h:0m:1s (0h:0m:0s left)
-TREE SEARCH COMPLETED AFTER 194 ITERATIONS / Time: 0h:0m:1s
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:0m:1s
 
 --------------------------------------------------------------------
 |                    FINALIZING TREE SEARCH                        |
 --------------------------------------------------------------------
 Performs final model parameters optimization
 Estimate model parameters (epsilon = 0.010)
-1. Initial log-likelihood: -1729.607
-Optimal log-likelihood: -1729.607
-Rate parameters:  A-C: 1.00000  A-G: 27.10993  A-T: 1.00000  C-G: 1.00000  C-T: 27.10993  G-T: 1.00000
+1. Initial log-likelihood: -1729.608
+Optimal log-likelihood: -1729.608
+Rate parameters:  A-C: 1.00000  A-G: 27.11031  A-T: 1.00000  C-G: 1.00000  C-T: 27.11031  G-T: 1.00000
 Base frequencies:  A: 0.302  C: 0.192  G: 0.187  T: 0.319
 Proportion of invariable sites: 0.638
 Parameters optimization took 1 rounds (0.000 sec)
-BEST SCORE FOUND : -1729.607
+BEST SCORE FOUND : -1729.608
 Total tree length: 0.754
 
-Total number of iterations: 194
-CPU time used for tree search: 0.814 sec (0h:0m:0s)
-Wall-clock time used for tree search: 0.819 sec (0h:0m:0s)
-Total CPU time used: 1.602 sec (0h:0m:1s)
-Total wall-clock time used: 1.615 sec (0h:0m:1s)
+Total number of iterations: 102
+CPU time used for tree search: 0.412 sec (0h:0m:0s)
+Wall-clock time used for tree search: 0.414 sec (0h:0m:0s)
+Total CPU time used: 1.216 sec (0h:0m:1s)
+Total wall-clock time used: 1.227 sec (0h:0m:1s)
 
 Analysis results written to: 
   IQ-TREE report:                files_for_mast/SML_L_noout_align_rtex_w0001_0500.fasta.iqtree
@@ -388,4 +378,4 @@ Analysis results written to:
   Likelihood distances:          files_for_mast/SML_L_noout_align_rtex_w0001_0500.fasta.mldist
   Screen log file:               files_for_mast/SML_L_noout_align_rtex_w0001_0500.fasta.log
 
-Date and Time: Thu Oct 29 11:54:17 2026
+Date and Time: Thu Oct 29 14:25:55 2026

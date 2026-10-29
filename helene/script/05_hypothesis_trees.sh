@@ -1,7 +1,4 @@
-#!/usr/bin/env bash
-set -e
-#!/usr/bin/env bash
-set -euo pipefail
+
 
 # Cut an alignment into non-overlapping windows and infer a tree per window.
 #
@@ -15,10 +12,29 @@ set -euo pipefail
 # Writes files_for_mast/<base>_w0001_0500.fasta + .treefile, etc.
 WD=${WD:-//Users/amaqve/Documents/Amandas_PhD/Courses/molevol_phylogenomics/project_work/shamonda_virus/helene/out}
 cd "$WD"
+#!/usr/bin/env bash
+set -euo pipefail
 
-ALN=${1:?usage: window_cut.sh ALIGNMENT.fasta [WINDOW] [MERGE_BELOW]}
+# Cut an alignment into (optionally overlapping) windows and infer a tree per window.
+#
+# Usage: ./window_cut.sh ALIGNMENT.fasta [WINDOW] [STEP] [MIN_WIN]
+#
+#   WINDOW   window size in columns                     (default 500)
+#   STEP     distance between window starts             (default WINDOW/2)
+#              STEP  < WINDOW -> overlapping windows
+#              STEP == WINDOW -> non-overlapping, back-to-back
+#   MIN_WIN  drop a trailing window shorter than this   (default 0 = keep it)
+#
+# e.g. ./window_cut.sh M.fasta 500 250   ->  1-500, 251-750, 501-1000, ...
+#
+# Writes files_for_mast/<base>_w0001_0500.fasta + .treefile, etc.
+
+ALN=${1:?usage: window_cut.sh ALIGNMENT.fasta [WINDOW] [STEP] [MIN_WIN]}
 WINDOW=${2:-500}
-MERGE_BELOW=${3:-0}
+STEP=${3:-$((WINDOW / 2))}
+MIN_WIN=${4:-0}
+
+[ "$STEP" -ge 1 ] || { echo "STEP must be >= 1" >&2; exit 1; }
 
 [ -n "${WD:-}" ] && cd "$WD"
 
@@ -33,10 +49,11 @@ LEN=$(awk '/^>/ {if (n) exit} !/^>/ {n += length($0)} END {print n}' "$ALN")
 echo "Alignment:  $ALN"
 echo "Length:     $LEN columns"
 echo "Window:     $WINDOW"
-echo "Merge tail: $([ "$MERGE_BELOW" -gt 0 ] && echo "remainders < $MERGE_BELOW columns" || echo "no (remainder kept whole)")"
+echo "Step:       $STEP  ($([ "$STEP" -lt "$WINDOW" ] && echo "overlapping, $((WINDOW - STEP)) columns shared" || echo "non-overlapping"))"
+echo "Min window: $([ "$MIN_WIN" -gt 0 ] && echo "$MIN_WIN columns" || echo "none (trailing remainder kept)")"
 echo
 
-# Clear this base's windows from a previous run, so a different WINDOW size
+# Clear this base's windows from a previous run, so a different WINDOW/STEP
 # cannot leave stale files that the globs below would silently pick up.
 STALE=$(find "$OUTDIR" -maxdepth 1 -name "${BASE}_w*" -type f 2>/dev/null | wc -l | tr -d ' ')
 if [ "$STALE" -gt 0 ]; then
@@ -54,15 +71,13 @@ while [ "$START" -le "$LEN" ]; do
 
     END=$((START + WINDOW - 1))
     [ "$END" -gt "$LEN" ] && END=$LEN
-
-    # If what would be left after this window is too short to stand on its
-    # own, absorb it into this window rather than emitting a stub.
-    REMAIN=$((LEN - END))
-    if [ "$REMAIN" -gt 0 ] && [ "$REMAIN" -lt "$MERGE_BELOW" ]; then
-        END=$LEN
-    fi
-
     NCOL=$((END - START + 1))
+
+    # A trailing window too short to carry phylogenetic signal
+    if [ "$NCOL" -lt "$MIN_WIN" ]; then
+        echo "  dropping ${START}-${END} ($NCOL columns, below MIN_WIN=$MIN_WIN)"
+        break
+    fi
 
     OUT=$(printf "%s/%s_w%04d_%04d.fasta" "$OUTDIR" "$BASE" "$START" "$END")
 
@@ -76,7 +91,11 @@ while [ "$START" -le "$LEN" ]; do
         echo "  ${START}-${END} -> $OUT"
     fi
 
-    START=$((END + 1))
+    # This window already reached the last column: another start would only
+    # produce a stub nested inside it.
+    [ "$END" -ge "$LEN" ] && break
+
+    START=$((START + STEP))
 done
 
 echo
@@ -119,4 +138,11 @@ if [ "${#FAILED[@]}" -gt 0 ]; then
     echo
     echo "WARNING: ${#FAILED[@]} window(s) produced no tree:"
     printf '  %s\n' "${FAILED[@]}"
+fi
+
+if [ "$STEP" -lt "$WINDOW" ]; then
+    echo
+    echo "NOTE: windows overlap, so neighbouring trees share data and many will be"
+    echo "      identical in topology. Collapse duplicates before running MAST:"
+    echo "        iqtree3 -t ${BASE}_candidates.tre -rf_all"
 fi

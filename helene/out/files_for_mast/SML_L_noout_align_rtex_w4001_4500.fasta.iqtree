@@ -2,7 +2,7 @@ IQ-TREE 3.1.1 built Apr  2 2026
 
 Input file name: files_for_mast/SML_L_noout_align_rtex_w4001_4500.fasta
 Type of analysis: ModelFinder + tree reconstruction
-Random seed number: 254124
+Random seed number: 388018
 
 REFERENCES
 ----------
@@ -131,8 +131,8 @@ TIM2+R2           -1853.685    3815.370 - 6.84e-16    3828.718 - 9.69e-16    404
 TIM2e+R2          -1853.693    3815.387 - 6.78e-16    3828.735 - 9.61e-16    4042.975 - 2.98e-15
 TIM2e+R2          -1853.693    3815.387 - 6.78e-16    3828.735 - 9.61e-16    4042.975 - 2.98e-15
 TIM+R2            -1854.136    3816.271 - 4.36e-16    3829.619 - 6.18e-16    4043.860 - 1.91e-15
-TIMe+R2           -1854.143    3816.286 - 4.33e-16    3829.634 - 6.13e-16    4043.874 -  1.9e-15
-TIMe+R2           -1854.143    3816.286 - 4.33e-16    3829.634 - 6.13e-16    4043.874 -  1.9e-15
+TIMe+R2           -1854.143    3816.285 - 4.33e-16    3829.634 - 6.13e-16    4043.874 -  1.9e-15
+TIMe+R2           -1854.143    3816.285 - 4.33e-16    3829.634 - 6.13e-16    4043.874 -  1.9e-15
 TVMe+I            -1854.146    3816.293 - 4.31e-16    3829.641 - 6.11e-16    4043.882 - 1.89e-15
 TVMe+I            -1854.146    3816.293 - 4.31e-16    3829.641 - 6.11e-16    4043.882 - 1.89e-15
 TVM+I             -1854.150    3816.299 -  4.3e-16    3829.648 - 6.09e-16    4043.888 - 1.89e-15
@@ -158,8 +158,8 @@ HKY+G4            -1873.295    3848.590 - 4.18e-23    3860.429 - 1.26e-22    406
 K2P+G4            -1873.411    3848.821 - 3.72e-23    3860.660 - 1.12e-22    4063.766 -  9.1e-20
 K2P+G4            -1873.411    3848.821 - 3.72e-23    3860.660 - 1.12e-22    4063.766 -  9.1e-20
 HKY+R2            -1872.576    3849.152 - 3.16e-23    3861.484 - 7.44e-23    4068.312 - 9.38e-21
-K2P+R2            -1872.735    3849.469 - 2.69e-23    3861.801 - 6.35e-23    4068.629 -    8e-21
-K2P+R2            -1872.735    3849.469 - 2.69e-23    3861.801 - 6.35e-23    4068.629 -    8e-21
+K2P+R2            -1872.735    3849.469 - 2.69e-23    3861.800 - 6.35e-23    4068.629 -    8e-21
+K2P+R2            -1872.735    3849.469 - 2.69e-23    3861.800 - 6.35e-23    4068.629 -    8e-21
 F81+F+I           -2034.687    4175.374 - 4.58e-94    4188.208 -  8.4e-94    4398.748 - 1.66e-92
 F81+F+G4          -2037.846    4181.693 - 1.94e-95    4194.527 - 3.57e-95    4405.067 - 7.03e-94
 F81+F+R2          -2035.183    4178.365 - 1.03e-94    4191.714 - 1.46e-94    4405.954 - 4.51e-94
@@ -173,7 +173,7 @@ F81+R2            -2048.588    4199.177 - 3.11e-99    4211.016 - 9.36e-99    441
 JC+R2             -2048.594    4199.188 - 3.09e-99    4211.028 - 9.31e-99    4414.133 - 7.55e-96
 JC+R2             -2048.594    4199.188 - 3.09e-99    4211.028 - 9.31e-99    4414.133 - 7.55e-96
 JC+I+R2           -2048.348    4200.697 - 1.45e-99    4213.028 - 3.43e-99    4419.856 - 4.32e-97
-JC+I+G4           -2051.686    4205.372 - 1.4e-100    4217.211 - 4.23e-100    4420.317 - 3.43e-97
+JC+I+G4           -2051.686    4205.372 - 1.4e-100    4217.212 - 4.23e-100    4420.317 - 3.43e-97
 JC+R3             -2048.705    4203.410 - 3.74e-100    4216.245 - 6.86e-100    4426.785 - 1.35e-98
 JC+I+R3           -2048.442    4204.884 - 1.79e-100    4218.232 - 2.54e-100    4432.473 - 7.86e-100
 JC                -2104.665    4307.330 - 1.02e-122    4318.218 - 4.93e-122    4513.845 - 1.68e-117
@@ -193,10 +193,10 @@ Model of substitution: HKY+F+I
 Rate parameter R:
 
   A-C: 1.0000
-  A-G: 29.0397
+  A-G: 29.0454
   A-T: 1.0000
   C-G: 1.0000
-  C-T: 29.0397
+  C-T: 29.0454
   G-T: 1.0000
 
 State frequencies: (empirical counts from alignment)
@@ -208,10 +208,10 @@ State frequencies: (empirical counts from alignment)
 
 Rate matrix Q:
 
-  A   -0.7746   0.02537    0.7083   0.04094
-  C   0.04942    -1.263   0.02439     1.189
-  G     1.435   0.02537    -1.501   0.04094
-  T   0.04942    0.7368   0.02439   -0.8106
+  A   -0.7746   0.02537    0.7083   0.04093
+  C   0.04941    -1.263   0.02439     1.189
+  G     1.435   0.02537    -1.501   0.04093
+  T   0.04941    0.7368   0.02439   -0.8106
 
 Model of rate heterogeneity: Invar
 Proportion of invariable sites: 0.6289
@@ -223,15 +223,15 @@ Proportion of invariable sites: 0.6289
 MAXIMUM LIKELIHOOD TREE
 -----------------------
 
-Log-likelihood of the tree: -1818.1574 (s.e. 71.3826)
+Log-likelihood of the tree: -1818.1554 (s.e. 71.3800)
 Unconstrained log-likelihood (without tree): -1501.4130
 Number of free parameters (#branches + #model parameters): 54
-Akaike information criterion (AIC) score: 3744.3148
-Corrected Akaike information criterion (AICc) score: 3757.6631
-Bayesian information criterion (BIC) score: 3971.9036
+Akaike information criterion (AIC) score: 3744.3109
+Corrected Akaike information criterion (AICc) score: 3757.6592
+Bayesian information criterion (BIC) score: 3971.8997
 
-Total tree length (sum of branch lengths): 0.9231
-Sum of internal branch lengths: 0.8398 (90.9762% of tree length)
+Total tree length (sum of branch lengths): 0.9234
+Sum of internal branch lengths: 0.8402 (90.9862% of tree length)
 
 WARNING: 9 near-zero internal branches (<0.0020) should be treated with caution
          Such branches are denoted by '**' in the figure below
@@ -272,33 +272,33 @@ NOTE: Tree is UNROOTED although outgroup taxon 'KC355454' is drawn at root
 |        +--|
 |        |  +**PP626412
 |     +**|
-|     |  |        +**PP592886
-|     |  |     +**|
-|     |  |     |  +**KP731878
-|     |  |  +--|
-|     |  |  |  +--KP731877
-|     |  +**|
-|     |     +--KX384874
+|     |  |     +**PP592886
+|     |  |  +**|
+|     |  |  |  +**KP731878
+|     |  +--|
+|     |     +--KP731877
 |  +**|
-|  |  |  +--KC139365
-|  |  +**|
-|  |     +--KP731880
+|  |  +--KC139365
 +**|
-|  +**KX384868
+|  |        +**KC139362
+|  |     +--|
+|  |     |  +**KC139363
+|  |  +**|
+|  |  |  +--KP731880
+|  +**|
+|     +--KX384874
 |
-|  +**KC139362
-+--|
-   +**KC139363
++**KX384868
 
 Tree in newick format:
 
-(KC355454:0.0000010000,(((((((((OZ502471:0.0000010000,OZ516531:0.0000010000):0.0000010000,PZ797891:0.0019833572):0.0019824891,OZ516534:0.0000027516):0.1089912169,NC_018463:0.0000029156):0.0083365083,(((LC811388:0.0000010000,LC811385:0.0000010000):0.0129099210,((((MH735102:0.0017138266,HE795090:0.0107714803):0.0114682283,MH735101:0.0055516168):0.1303432086,((LC741384:0.0334558997,LC811394:0.0041991829):0.0019764046,LC811391:0.0000021589):0.1282435802):0.2286276786,LC811397:0.0000024879):0.0037054164):0.0173560723,LC741387:0.0000026173):0.1081000966):0.0839643304,PP626412:0.0000020437):0.0021349127,(((PP592886:0.0000010000,KP731878:0.0000010000):0.0000010000,KP731877:0.0021494245):0.0065152466,KX384874:0.0021442974):0.0000020424):0.0000029548,(KC139365:0.0021352519,KP731880:0.0021352496):0.0000010000):0.0000010000,KX384868:0.0000010000):0.0000010000,(KC139362:0.0000010000,KC139363:0.0000010000):0.0021369607);
+(KC355454:0.0000010000,(((((((((OZ502471:0.0000010000,OZ516531:0.0000010000):0.0000010000,PZ797891:0.0019829139):0.0019821970,OZ516534:0.0000022665):0.1090021839,NC_018463:0.0000028576):0.0083315905,(((LC811388:0.0000010000,LC811385:0.0000010000):0.0129115602,((((MH735102:0.0017132003,HE795090:0.0107737406):0.0115611205,MH735101:0.0054819374):0.1304874584,((LC741384:0.0334607104,LC811394:0.0041998412):0.0019761343,LC811391:0.0000023944):0.1281905973):0.2288148637,LC811397:0.0000028301):0.0037052952):0.0173582451,LC741387:0.0000025848):0.1081065588):0.0839764405,PP626412:0.0000010000):0.0021350128,((PP592886:0.0000010000,KP731878:0.0000010000):0.0000010000,KP731877:0.0021493688):0.0065158984):0.0000010000,KC139365:0.0021352007):0.0000010000,(((KC139362:0.0000010000,KC139363:0.0000010000):0.0021369061,KP731880:0.0021351976):0.0000010000,KX384874:0.0021442229):0.0000010000):0.0000010000,KX384868:0.0000010000);
 
 ALISIM COMMAND
 --------------
 To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
 
---alisim simulated_MSA -t files_for_mast/SML_L_noout_align_rtex_w4001_4500.fasta.treefile -m "HKY{29.0397}+F{0.352692,0.181077,0.174077,0.292154}+I{0.628908}" --length 500
+--alisim simulated_MSA -t files_for_mast/SML_L_noout_align_rtex_w4001_4500.fasta.treefile -m "HKY{29.0454}+F{0.352692,0.181077,0.174077,0.292154}+I{0.628895}" --length 500
 
 To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
 
@@ -313,7 +313,7 @@ For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
 TIME STAMP
 ----------
 
-Date and time: Thu Oct 29 11:54:28 2026
-Total CPU time used: 1.26053 seconds (0h:0m:1s)
-Total wall-clock time used: 1.27303 seconds (0h:0m:1s)
+Date and time: Thu Oct 29 14:26:16 2026
+Total CPU time used: 1.02097 seconds (0h:0m:1s)
+Total wall-clock time used: 1.03373 seconds (0h:0m:1s)
 
